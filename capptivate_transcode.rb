@@ -54,7 +54,7 @@ if __FILE__==$0
 
       puts hypePath
       Find.find(hypePath) do |f|
-        if f.match(/\.mov\Z/)
+        if f.match(/\.mov\Z/) && !f.match(/video.mov/) && !f.match(/original.mov/)
           puts "Video path: #{f}"
           movie_file = f
        
@@ -62,12 +62,11 @@ if __FILE__==$0
           swap_videos(movie_file)
           puts "pong"
         end
-        break f.match(/\.mov\Z/)
       end
 
     else
       Find.find(path) do |f|
-        if f.match(/\.mov\Z/)
+        if f.match(/\.mov\Z/) && !f.match(/video.mov/) && !f.match(/original.mov/)
           puts "Video path: #{f}"
           movie_file = f
        
@@ -75,7 +74,6 @@ if __FILE__==$0
           swap_videos(movie_file)
           puts "ping"
         end
-        break f.match(/\.mov\Z/)
       end
     end
   end
