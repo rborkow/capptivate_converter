@@ -63,7 +63,6 @@ if __FILE__==$0
           puts "pong"
         end
       end
-    end
 
     else
       Find.find(path) do |f|
