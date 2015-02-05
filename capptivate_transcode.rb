@@ -74,8 +74,11 @@ if __FILE__==$0
           swap_videos(movie_file)
           puts "ping"
         end
+        puts "ping ping"
       end
+      puts "ping ping ping"
     end
+    puts "ping ping ping ping"
   end
 
   ###Write stats to file###
